@@ -1,0 +1,50 @@
+
+/* 基础段落样式 */
+p {
+    color: red;
+    font-size: 20px;
+}
+
+/* 自定义class：突出显示 */
+.standout { 
+    color: rgb(0, 255, 247);
+}
+
+/* 标题样式 */
+h1 {
+    color: red; 
+    font-size: 30px;
+}
+
+/* 标签限定class选择器 */
+h2.standout {
+    color: red;
+}
+
+/* 图片样式：圆角/透明/滤镜 */
+.image1{
+    border-radius:50%;
+}
+.image2{
+    border-radius:30px;
+}
+.image3{
+    opacity:0.1;
+}
+.image4{
+    filter:grayscale(0.5);
+}
+.image5{
+    filter:blur(10px);
+}
+
+/* 悬停交互效果 */
+p:hover { 
+    background:rgb(0, 179, 255);
+}
+.image5:hover{
+    filter: blur(5px);
+}
+p:hover{ 
+    background:rgb(0, 26, 128);
+}
