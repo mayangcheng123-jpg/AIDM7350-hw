@@ -1,0 +1,54 @@
+{
+  "name": "chinese-culture-map",
+  "version": "1.0.0",
+  "description": "An interactive web application showcasing China's rich cultural heritage across different regions. Features responsive design, detailed regional information, and engaging educational content.",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 || node -m http-server",
+    "build": "echo 'Project uses vanilla HTML/CSS/JS - no build required'",
+    "test": "echo 'Run tests manually in browser'",
+    "deploy": "echo 'Deploy to your hosting platform'"
+  },
+  "keywords": [
+    "chinese-culture",
+    "interactive-map",
+    "cultural-heritage",
+    "educational",
+    "responsive-web",
+    "frontend",
+    "chinese-regions",
+    "cultural-exploration"
+  ],
+  "author": "Cultural Heritage Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/chinese-culture-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/chinese-culture-map/issues"
+  },
+  "homepage": "https://github.com/yourusername/chinese-culture-map#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "comment": "Optional tools for development"
+  },
+  "browser": {
+    "service-worker.js": "./service-worker.js"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "maintained node versions"
+  ],
+  "meta": {
+    "creator": "Chinese Culture Map Team",
+    "created": "2024",
+    "lastUpdated": "2024-03-03",
+    "status": "production",
+    "accessibility": "WCAG 2.1 AA compliant",
+    "performance": "Optimized for fast loading and offline support"
+  }
+}

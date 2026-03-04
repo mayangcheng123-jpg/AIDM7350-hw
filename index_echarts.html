@@ -6,12 +6,7 @@
     <title>Chinese Culture Map - Explore China's Rich Heritage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts - 艺术字体 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <!-- ECharts CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <script src="https://echarts.apache.org/dist/echarts.min.js"></script>
 </head>
 <body>
     <!-- Navigation Header -->
@@ -55,7 +50,7 @@
 
         <!-- Centered Map Container -->
         <div class="map-wrapper">
-            <div id="main" class="china-map-container" style="width: 100%; height: 600px; margin: 0 auto;"></div>
+            <div id="china-map-echarts" class="china-map-container"></div>
         </div>
 
         <!-- Region Information Panel -->
@@ -78,10 +73,7 @@
         </div>
 
         <div class="culture-grid">
-            <div class="culture-card" style="background: linear-gradient(135deg, rgba(230, 245, 255, 0.8), rgba(255, 240, 245, 0.8)); overflow: hidden;">
-                <div class="culture-card-decoration">
-                    <i class="fas fa-feather" style="position: absolute; top: -20px; right: -20px; font-size: 100px; opacity: 0.05;"></i>
-                </div>
+            <div class="culture-card">
                 <div class="culture-icon">
                     <i class="fas fa-scroll"></i>
                 </div>
@@ -90,10 +82,7 @@
                 <a href="#" class="card-link">Learn More →</a>
             </div>
 
-            <div class="culture-card" style="background: linear-gradient(135deg, rgba(255, 250, 230, 0.8), rgba(255, 245, 240, 0.8)); overflow: hidden;">
-                <div class="culture-card-decoration">
-                    <i class="fas fa-chopsticks" style="position: absolute; top: -20px; right: -20px; font-size: 100px; opacity: 0.05;"></i>
-                </div>
+            <div class="culture-card">
                 <div class="culture-icon">
                     <i class="fas fa-utensils"></i>
                 </div>
@@ -102,10 +91,7 @@
                 <a href="#" class="card-link">Learn More →</a>
             </div>
 
-            <div class="culture-card" style="background: linear-gradient(135deg, rgba(240, 250, 255, 0.8), rgba(245, 240, 255, 0.8)); overflow: hidden;">
-                <div class="culture-card-decoration">
-                    <i class="fas fa-gopuram" style="position: absolute; top: -20px; right: -20px; font-size: 100px; opacity: 0.05;"></i>
-                </div>
+            <div class="culture-card">
                 <div class="culture-icon">
                     <i class="fas fa-building"></i>
                 </div>
@@ -114,10 +100,7 @@
                 <a href="#" class="card-link">Learn More →</a>
             </div>
 
-            <div class="culture-card" style="background: linear-gradient(135deg, rgba(255, 240, 245, 0.8), rgba(240, 255, 250, 0.8)); overflow: hidden;">
-                <div class="culture-card-decoration">
-                    <i class="fas fa-music" style="position: absolute; top: -20px; right: -20px; font-size: 100px; opacity: 0.05;"></i>
-                </div>
+            <div class="culture-card">
                 <div class="culture-icon">
                     <i class="fas fa-music"></i>
                 </div>
@@ -126,10 +109,7 @@
                 <a href="#" class="card-link">Learn More →</a>
             </div>
 
-            <div class="culture-card" style="background: linear-gradient(135deg, rgba(255, 245, 230, 0.8), rgba(255, 240, 250, 0.8)); overflow: hidden;">
-                <div class="culture-card-decoration">
-                    <i class="fas fa-brush" style="position: absolute; top: -20px; right: -20px; font-size: 100px; opacity: 0.05;"></i>
-                </div>
+            <div class="culture-card">
                 <div class="culture-icon">
                     <i class="fas fa-palette"></i>
                 </div>
@@ -138,10 +118,7 @@
                 <a href="#" class="card-link">Learn More →</a>
             </div>
 
-            <div class="culture-card" style="background: linear-gradient(135deg, rgba(240, 245, 255, 0.8), rgba(255, 245, 240, 0.8)); overflow: hidden;">
-                <div class="culture-card-decoration">
-                    <i class="fas fa-yin-yang" style="position: absolute; top: -20px; right: -20px; font-size: 100px; opacity: 0.05;"></i>
-                </div>
+            <div class="culture-card">
                 <div class="culture-icon">
                     <i class="fas fa-yin-yang"></i>
                 </div>
@@ -250,8 +227,6 @@
         </div>
     </footer>
 
-    <!-- Image Modal -->
-    <script src="echarts-pro.js"></script>
-    <script src="interactions.js"></script>
+    <script src="script-echarts.js"></script>
 </body>
 </html>

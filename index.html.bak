@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Culture Map - Explore China's Rich Heritage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.2/echarts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.js"></script>
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <i class="fas fa-map"></i>
+                <span>Chinese Culture Map</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#regions" class="nav-link">Regions</a>
+                <a href="#cultures" class="nav-link">Cultures</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover China's Cultural Treasures</h1>
+            <p class="hero-subtitle">An interactive exploration of regional cultures, traditions, and heritage across China</p>
+            <button class="cta-button" id="exploreBtn">Start Exploring</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Main Map Section -->
+    <section class="map-section" id="regions">
+        <div class="section-header">
+            <h2>Interactive Regional Map</h2>
+            <p>Click on any region to discover its unique culture and traditions</p>
+        </div>
+
+        <div class="map-container">
+            <!-- Map Display with Real China Map -->
+            <div class="map-display">
+                <svg class="china-map" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Real China Map with Provinces -->
+                    <!-- Northeast Region -->
+                    <g class="province" data-province="heilongjiang" data-region="northeast">
+                        <path d="M 650 100 L 720 110 L 730 150 L 700 170 L 680 160 L 650 140 Z" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="690" y="135" text-anchor="middle" class="province-label" font-size="10">黑</text>
+                    </g>
+                    <g class="province" data-province="jilin" data-region="northeast">
+                        <path d="M 600 140 L 650 140 L 680 160 L 670 210 L 620 200 L 600 170 Z" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="640" y="170" text-anchor="middle" class="province-label" font-size="10">吉</text>
+                    </g>
+                    <g class="province" data-province="liaoning" data-region="northeast">
+                        <path d="M 600 170 L 620 200 L 670 210 L 680 260 L 630 270 L 600 230 Z" fill="#e8f4f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="640" y="225" text-anchor="middle" class="province-label" font-size="10">辽</text>
+                    </g>
+
+                    <!-- North Region -->
+                    <g class="province" data-province="beijing" data-region="north">
+                        <circle cx="480" cy="210" r="8" fill="#f0f8e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="480" y="215" text-anchor="middle" class="province-label" font-size="8">京</text>
+                    </g>
+                    <g class="province" data-province="tianjin" data-region="north">
+                        <circle cx="520" cy="220" r="8" fill="#f0f8e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="520" y="225" text-anchor="middle" class="province-label" font-size="8">津</text>
+                    </g>
+                    <g class="province" data-province="hebei" data-region="north">
+                        <path d="M 450 240 L 520 220 L 550 280 L 500 320 L 420 310 Z" fill="#f0f8e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="490" y="280" text-anchor="middle" class="province-label" font-size="10">河北</text>
+                    </g>
+                    <g class="province" data-province="shanxi" data-region="north">
+                        <path d="M 420 310 L 500 320 L 510 400 L 450 420 L 420 380 Z" fill="#f0f8e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="470" y="370" text-anchor="middle" class="province-label" font-size="10">山西</text>
+                    </g>
+                    <g class="province" data-province="inner-mongolia" data-region="north">
+                        <path d="M 350 200 L 450 210 L 480 170 L 650 100 L 620 50 L 400 60 Z" fill="#f0f8e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="480" y="130" text-anchor="middle" class="province-label" font-size="10">内蒙</text>
+                    </g>
+
+                    <!-- East Region -->
+                    <g class="province" data-province="shanghai" data-region="east">
+                        <circle cx="600" cy="340" r="6" fill="#f8f4e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="600" y="343" text-anchor="middle" class="province-label" font-size="8">沪</text>
+                    </g>
+                    <g class="province" data-province="jiangsu" data-region="east">
+                        <path d="M 560 300 L 600 320 L 620 380 L 560 400 L 530 350 Z" fill="#f8f4e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="575" y="360" text-anchor="middle" class="province-label" font-size="10">江苏</text>
+                    </g>
+                    <g class="province" data-province="zhejiang" data-region="east">
+                        <path d="M 560 400 L 620 380 L 650 450 L 600 480 L 560 450 Z" fill="#f8f4e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="605" y="440" text-anchor="middle" class="province-label" font-size="10">浙江</text>
+                    </g>
+
+                    <!-- Central Region -->
+                    <g class="province" data-province="henan" data-region="central">
+                        <path d="M 450 420 L 510 400 L 550 460 L 500 500 L 450 480 Z" fill="#f8e8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="490" y="460" text-anchor="middle" class="province-label" font-size="10">河南</text>
+                    </g>
+                    <g class="province" data-province="hubei" data-region="central">
+                        <path d="M 500 500 L 550 460 L 610 480 L 620 540 L 550 560 Z" fill="#f8e8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="560" y="520" text-anchor="middle" class="province-label" font-size="10">湖北</text>
+                    </g>
+                    <g class="province" data-province="hunan" data-region="central">
+                        <path d="M 550 560 L 620 540 L 650 620 L 580 650 L 540 600 Z" fill="#f8e8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="590" y="600" text-anchor="middle" class="province-label" font-size="10">湖南</text>
+                    </g>
+
+                    <!-- South Region -->
+                    <g class="province" data-province="guangdong" data-region="south">
+                        <path d="M 580 650 L 650 620 L 680 700 L 620 740 L 570 700 Z" fill="#e8f8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="620" y="700" text-anchor="middle" class="province-label" font-size="10">粤</text>
+                    </g>
+                    <g class="province" data-province="guangxi" data-region="south">
+                        <path d="M 520 600 L 580 650 L 570 700 L 480 720 L 460 650 Z" fill="#e8f8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="520" y="680" text-anchor="middle" class="province-label" font-size="10">桂</text>
+                    </g>
+                    <g class="province" data-province="hainan" data-region="south">
+                        <circle cx="610" cy="780" r="10" fill="#e8f8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="610" y="785" text-anchor="middle" class="province-label" font-size="9">海</text>
+                    </g>
+
+                    <!-- Southwest Region -->
+                    <g class="province" data-province="yunnan" data-region="southwest">
+                        <path d="M 380 650 L 460 650 L 480 720 L 420 750 L 360 700 Z" fill="#f8f0e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="430" y="705" text-anchor="middle" class="province-label" font-size="10">云南</text>
+                    </g>
+                    <g class="province" data-province="guizhou" data-region="southwest">
+                        <path d="M 460 650 L 520 600 L 550 660 L 480 720 Z" fill="#f8f0e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="500" y="665" text-anchor="middle" class="province-label" font-size="10">贵州</text>
+                    </g>
+
+                    <!-- West Region -->
+                    <g class="province" data-province="sichuan" data-region="west">
+                        <path d="M 420 480 L 500 500 L 550 560 L 500 600 L 420 580 Z" fill="#f0e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="480" y="540" text-anchor="middle" class="province-label" font-size="10">四川</text>
+                    </g>
+                    <g class="province" data-province="chongqing" data-region="west">
+                        <circle cx="485" cy="560" r="10" fill="#f0e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="485" y="565" text-anchor="middle" class="province-label" font-size="8">渝</text>
+                    </g>
+                    <g class="province" data-province="tibet" data-region="west">
+                        <path d="M 300 560 L 420 580 L 450 700 L 320 720 L 250 650 Z" fill="#f0e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="360" y="640" text-anchor="middle" class="province-label" font-size="10">西藏</text>
+                    </g>
+                    <g class="province" data-province="qinghai" data-region="west">
+                        <path d="M 320 520 L 420 480 L 420 580 L 300 560 Z" fill="#f0e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="360" y="540" text-anchor="middle" class="province-label" font-size="10">青海</text>
+                    </g>
+
+                    <!-- Northwest Region -->
+                    <g class="province" data-province="shaanxi" data-region="northwest">
+                        <path d="M 420 380 L 450 420 L 450 480 L 400 500 L 380 420 Z" fill="#e8e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="420" y="450" text-anchor="middle" class="province-label" font-size="10">陕西</text>
+                    </g>
+                    <g class="province" data-province="gansu" data-region="northwest">
+                        <path d="M 380 420 L 420 380 L 450 340 L 450 480 L 400 500 Z" fill="#e8e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="420" y="410" text-anchor="middle" class="province-label" font-size="10">甘肃</text>
+                    </g>
+                    <g class="province" data-province="ningxia" data-region="northwest">
+                        <path d="M 420 350 L 450 340 L 450 380 L 420 380 Z" fill="#e8e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="435" y="365" text-anchor="middle" class="province-label" font-size="8">宁</text>
+                    </g>
+                    <g class="province" data-province="xinjiang" data-region="northwest">
+                        <path d="M 250 300 L 380 320 L 400 400 L 380 420 L 320 380 L 280 350 Z" fill="#e8e8f8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="340" y="370" text-anchor="middle" class="province-label" font-size="10">新疆</text>
+                    </g>
+
+                    <!-- Fujian & Others -->
+                    <g class="province" data-province="fujian" data-region="east">
+                        <path d="M 650 450 L 700 460 L 720 530 L 680 550 L 650 500 Z" fill="#f8f4e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="685" y="500" text-anchor="middle" class="province-label" font-size="10">福建</text>
+                    </g>
+                    <g class="province" data-province="jiangxi" data-region="central">
+                        <path d="M 600 480 L 650 450 L 680 500 L 650 550 L 580 530 Z" fill="#f8e8f0" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="630" y="510" text-anchor="middle" class="province-label" font-size="10">江西</text>
+                    </g>
+                    <g class="province" data-province="anhui" data-region="east">
+                        <path d="M 550 380 L 600 340 L 600 400 L 560 420 Z" fill="#f8f4e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="575" y="385" text-anchor="middle" class="province-label" font-size="10">安徽</text>
+                    </g>
+                    <g class="province" data-province="shandong" data-region="north">
+                        <path d="M 550 280 L 600 320 L 600 340 L 560 300 Z" fill="#f0f8e8" stroke="#4a90a4" stroke-width="1.5"/>
+                        <text x="575" y="305" text-anchor="middle" class="province-label" font-size="10">山东</text>
+                    </g>
+                </svg>
+                
+                <!-- Tooltip for Province Info -->
+                <div class="province-tooltip" id="provinceTooltip" style="display: none;"></div>
+            </div>
+
+            <!-- Region Information Panel -->
+            <div class="region-info-panel">
+                <div class="info-header">
+                    <h3 id="regionName">Select a Region</h3>
+                    <button class="close-btn" id="closeBtn">&times;</button>
+                </div>
+                <div class="info-content">
+                    <div id="regionContent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Elements Section -->
+    <section class="cultures-section" id="cultures">
+        <div class="section-header">
+            <h2>Cultural Heritage Elements</h2>
+            <p>Explore the diverse cultural aspects that define Chinese civilization</p>
+        </div>
+
+        <div class="culture-grid">
+            <div class="culture-card">
+                <div class="culture-icon">
+                    <i class="fas fa-scroll"></i>
+                </div>
+                <h3>Calligraphy & Literature</h3>
+                <p>Ancient literary traditions and the beautiful art of Chinese calligraphy spanning thousands of years of creative expression.</p>
+                <a href="#" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="culture-card">
+                <div class="culture-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Cuisine & Gastronomy</h3>
+                <p>Regional cuisines with unique flavors, cooking techniques, and culinary philosophies across different provinces.</p>
+                <a href="#" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="culture-card">
+                <div class="culture-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3>Architecture & Monuments</h3>
+                <p>Iconic structures from ancient temples to the Great Wall, showcasing architectural excellence and heritage.</p>
+                <a href="#" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="culture-card">
+                <div class="culture-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h3>Music & Performance</h3>
+                <p>Traditional music, opera, and performing arts that reflect the soul and spirit of Chinese culture.</p>
+                <a href="#" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="culture-card">
+                <div class="culture-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Art & Craftsmanship</h3>
+                <p>Painting, pottery, silk work, and traditional crafts demonstrating artistic mastery and cultural identity.</p>
+                <a href="#" class="card-link">Learn More →</a>
+            </div>
+
+            <div class="culture-card">
+                <div class="culture-icon">
+                    <i class="fas fa-yin-yang"></i>
+                </div>
+                <h3>Philosophy & Traditions</h3>
+                <p>Wisdom traditions including Taoism, Buddhism, Confucianism, and martial arts philosophy.</p>
+                <a href="#" class="card-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-number">5000+</div>
+                <div class="stat-label">Years of History</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">56</div>
+                <div class="stat-label">Ethnic Groups</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">34</div>
+                <div class="stat-label">Provincial Regions</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">UNESCO Heritage Sites</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="section-header">
+            <h2>About This Project</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-box">
+                <h3><i class="fas fa-lightbulb"></i> Our Mission</h3>
+                <p>To create an engaging platform that celebrates and educates about the rich, diverse cultural heritage of China, making it accessible to people worldwide.</p>
+            </div>
+            <div class="about-box">
+                <h3><i class="fas fa-globe"></i> Global Perspective</h3>
+                <p>We believe cultural understanding bridges communities. Our comprehensive map showcases China's contributions to world civilization and promotes cross-cultural appreciation.</p>
+            </div>
+            <div class="about-box">
+                <h3><i class="fas fa-book"></i> Curated Content</h3>
+                <p>Every region's information is carefully researched and curated by cultural experts, ensuring accuracy and depth in our representation of Chinese heritage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2>Get in Touch</h2>
+            <p>Have questions or suggestions? We'd love to hear from you!</p>
+        </div>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Chinese Culture Map</h4>
+                <p>Celebrating the diversity and richness of Chinese civilization across regions and traditions.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#regions">Regions</a></li>
+                    <li><a href="#cultures">Cultures</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Chinese Culture Map. All rights reserved. | Designed with <i class="fas fa-heart"></i> for cultural preservation</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
